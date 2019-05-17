@@ -1,0 +1,14 @@
+V3 12
+FL C:/Users/Adam/Documents/GitHub/projekt/main.vhd 2019/03/11.11:00:46 P.20131013
+FL "C:/Users/lab/Desktop/organy pon 8/eeeeeeeeeeeeeeee/main.vhd" 2019/03/11.10:11:58 P.20131013
+FL F:/projekt/main.vhd 2019/03/25.10:55:12 P.20131013
+EN work/main 1553507715 FL F:/projekt/main.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/main/Behavioral 1553507716 \
+      FL F:/projekt/main.vhd EN work/main 1553507715
+FL F:/projekt/main_sch.vhf 2019/03/25.10:48:50 P.20131013
+EN work/main_sch 1553507717 FL F:/projekt/main_sch.vhf PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/main_sch/BEHAVIORAL 1553507718 \
+      FL F:/projekt/main_sch.vhf EN work/main_sch 1553507717 CP DACWrite CP PS2_Kbd \
+      CP main

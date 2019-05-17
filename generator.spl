@@ -1,0 +1,5 @@
+[Inputs]
+Clk
+[Outputs]
+=NUMBER_OUT[4:0]=
+[BiDir]

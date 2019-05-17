@@ -1,0 +1,12 @@
+[Inputs]
+Clk
+CALC
+=RANDOM_NUMBER[4:0]=
+=DO[7:0]=
+[Outputs]
+SWITCH
+Rdy
+=value[4:0]=
+=blank[15:0]=
+=SCHODEK_OUT[12:0]=
+[BiDir]

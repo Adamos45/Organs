@@ -1,0 +1,7 @@
+[Inputs]
+Clk
+Rdy
+=scan_tonum[4:0]=
+[Outputs]
+=value[63:0]=
+[BiDir]

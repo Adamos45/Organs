@@ -1,0 +1,10 @@
+[Inputs]
+KbdE0
+KbdF0
+KbdDataRdy
+=KbdDO[7:0]=
+[Outputs]
+LCD_WE
+LCD_DnI
+=LCD_DI[7:0]=
+[BiDir]

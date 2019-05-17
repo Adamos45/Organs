@@ -1,0 +1,20 @@
+select figure at 1017 657 8 -branches -sn=1
+delete selection -sn=1
+select figure at 1026 713 8 -branches -sn=1
+delete selection -sn=1
+select figure at 836 1012 8 -branches -sn=1
+move instance at 656 1008 to 656 1136 R0 -keepConn -sn=1
+add instance keyboard 640 624 R0 -sn=1
+add autowire 640 784 496 448 8 -sn=1
+add autowire 496 512 640 848 8 -sn=1
+add autowire 1024 656 656 1616 8 -sn=1
+add autowire 1024 720 1056 720 8 -sn=1
+move instance at 656 1136 to 640 1344 R0 -keepConn -sn=1
+select figure at 866 508 8 -branches -sn=1
+move instance at 640 624 to 608 624 R0 -keepConn -sn=1
+select figure at 1048 833 8 -branches -sn=1
+select figure at 1003 122 8 -branches -sn=1
+undo
+undo
+undo
+move instance at 640 624 to 640 704 R0 -keepConn -sn=1

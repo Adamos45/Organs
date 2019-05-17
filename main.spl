@@ -1,0 +1,11 @@
+[Inputs]
+PLAY
+Clock
+Reset
+=schodek_store[12:0]=
+[Outputs]
+Start
+=Output[11:0]=
+=Addr[3:0]=
+=Cmd[3:0]=
+[BiDir]

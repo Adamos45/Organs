@@ -1,0 +1,9 @@
+[Inputs]
+F0
+SWITCH
+=DO[7:0]=
+=SCHODEK_GEN[12:0]=
+[Outputs]
+PLAY
+=schodek_store[12:0]=
+[BiDir]

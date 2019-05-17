@@ -1,0 +1,708 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: main_sch.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main_sch.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main_sch"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : main_sch
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/lab/Desktop/prj2/main.vhd" in Library work.
+Architecture behavioral of Entity main is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/prj2/calculate.vhd" in Library work.
+Architecture behavioral of Entity calculate is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/prj2/generator.vhd" in Library work.
+Entity <generator> compiled.
+Entity <generator> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/lab/Desktop/prj2/keyboard.vhd" in Library work.
+Architecture behavioral of Entity keyboard is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/prj2/decider.vhd" in Library work.
+Architecture behavioral of Entity decider is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/prj2/main_sch.vhf" in Library work.
+Architecture behavioral of Entity main_sch is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main_sch> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <main> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <calculate> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <generator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <keyboard> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <decider> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main_sch> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/lab/Desktop/prj2/main_sch.vhf" line 156: Unconnected output port 'E0' of component 'PS2_Kbd'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/prj2/main_sch.vhf" line 156: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/prj2/main_sch.vhf" line 176: Instantiating black box module <LCD1x64>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/prj2/main_sch.vhf" line 216: Unconnected output port 'Busy' of component 'DACWrite'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/prj2/main_sch.vhf" line 216: Instantiating black box module <DACWrite>.
+Entity <main_sch> analyzed. Unit <main_sch> generated.
+
+Analyzing Entity <main> in library <work> (Architecture <behavioral>).
+Entity <main> analyzed. Unit <main> generated.
+
+Analyzing Entity <calculate> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/lab/Desktop/prj2/calculate.vhd" line 45: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <scan_tonum>
+Entity <calculate> analyzed. Unit <calculate> generated.
+
+Analyzing Entity <generator> in library <work> (Architecture <behavioral>).
+Entity <generator> analyzed. Unit <generator> generated.
+
+Analyzing Entity <keyboard> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/lab/Desktop/prj2/keyboard.vhd" line 47: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <SWITCH>, <DO>, <SCHODEK_GEN>
+Entity <keyboard> analyzed. Unit <keyboard> generated.
+
+Analyzing Entity <decider> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/lab/Desktop/prj2/decider.vhd" line 63: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <take_rand>, <scan_tonum>
+Entity <decider> analyzed. Unit <decider> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <main>.
+    Related source file is "C:/Users/lab/Desktop/prj2/main.vhd".
+    Found 1-bit register for signal <Start>.
+    Found 13-bit register for signal <schodek>.
+    Found 13-bit adder for signal <schodek$addsub0000> created at line 85.
+    Found 13-bit comparator equal for signal <schodek$cmp_eq0000> created at line 76.
+    Found 1-bit register for signal <state<0>>.
+    Found 5-bit register for signal <temp>.
+    Found 5-bit adder for signal <temp$addsub0000> created at line 82.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <main> synthesized.
+
+
+Synthesizing Unit <calculate>.
+    Related source file is "C:/Users/lab/Desktop/prj2/calculate.vhd".
+WARNING:Xst:647 - Input <Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 64-bit latch for signal <temp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32x64-bit ROM for signal <temp$mux0001> created at line 48.
+    Summary:
+	inferred   1 ROM(s).
+Unit <calculate> synthesized.
+
+
+Synthesizing Unit <generator>.
+    Related source file is "C:/Users/lab/Desktop/prj2/generator.vhd".
+WARNING:Xst:1780 - Signal <temp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <max_number> is used but never assigned. This sourceless signal will be automatically connected to value 1011.
+    Found 32-bit up counter for signal <divider>.
+    Found 5-bit register for signal <numb_out>.
+    Found 4-bit up counter for signal <number>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   5 D-type flip-flop(s).
+Unit <generator> synthesized.
+
+
+Synthesizing Unit <keyboard>.
+    Related source file is "C:/Users/lab/Desktop/prj2/keyboard.vhd".
+Unit <keyboard> synthesized.
+
+
+Synthesizing Unit <decider>.
+    Related source file is "C:/Users/lab/Desktop/prj2/decider.vhd".
+WARNING:Xst:653 - Signal <max_number> is used but never assigned. This sourceless signal will be automatically connected to value 0010111110101111000010000000.
+    Found 16x13-bit ROM for signal <temp$mux0000>.
+    Found 1-bit register for signal <ended>.
+    Found 5-bit subtractor for signal <equals>.
+    Found 28-bit up counter for signal <number>.
+    Found 5-bit register for signal <rand>.
+    Found 5-bit register for signal <scan_tonum>.
+    Found 1-bit register for signal <start_count>.
+    Found 5-bit register for signal <take_rand>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <decider> synthesized.
+
+
+Synthesizing Unit <main_sch>.
+    Related source file is "C:/Users/lab/Desktop/prj2/main_sch.vhf".
+Unit <main_sch> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x13-bit ROM                                         : 1
+ 32x64-bit ROM                                         : 1
+# Adders/Subtractors                                   : 3
+ 13-bit adder                                          : 1
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Counters                                             : 3
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 10
+ 1-bit register                                        : 4
+ 13-bit register                                       : 1
+ 5-bit register                                        : 5
+# Latches                                              : 1
+ 64-bit latch                                          : 1
+# Comparators                                          : 1
+ 13-bit comparator equal                               : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <PS2_Kbd.ngc>.
+Reading core <LCD1x64.ngc>.
+Reading core <DACWrite.ngc>.
+Loading core <PS2_Kbd> for timing and area information for instance <XLXI_5>.
+Loading core <LCD1x64> for timing and area information for instance <XLXI_18>.
+Loading core <DACWrite> for timing and area information for instance <XLXI_33>.
+WARNING:Xst:1710 - FF/Latch <numb_out_4> (without init value) has a constant value of 0 in block <XLXI_27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scan_tonum_4> has a constant value of 0 in block <XLXI_32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rand_4> (without init value) has a constant value of 0 in block <XLXI_32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <take_rand_4> (without init value) has a constant value of 0 in block <XLXI_32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <0>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <1>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <2>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <3>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <4>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <5>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <6>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <7>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <8>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <9>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <10>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <11>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <12>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <13>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <14>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <15>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <16>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <17>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <18>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <19>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <20>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <21>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <22>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <23>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <24>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <25>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <26>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <27>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <28>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <29>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <30>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <31>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <32>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <33>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <34>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <35>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <36>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <37>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <38>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <39>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <40>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <41>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <42>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <43>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <44>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <45>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <46>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <47>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <48>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <49>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <50>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <51>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <52>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <53>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <54>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <55>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <56>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <57>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <58>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <59>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <60>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <61>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <62>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <63>.
+WARNING:Xst:2404 -  FFs/Latches <numb_out<4:4>> (without init value) have a constant value of 0 in block <generator>.
+
+Synthesizing (advanced) Unit <decider>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_temp_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <decider> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x13-bit ROM                                         : 1
+ 32x64-bit ROM                                         : 1
+# Adders/Subtractors                                   : 3
+ 13-bit adder                                          : 1
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Counters                                             : 3
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 41
+ Flip-Flops                                            : 41
+# Latches                                              : 1
+ 64-bit latch                                          : 1
+# Comparators                                          : 1
+ 13-bit comparator equal                               : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <scan_tonum_4> has a constant value of 0 in block <decider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_26> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_27> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_28> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_29> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_30> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_31> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_32> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_33> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_34> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_35> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_36> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_37> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_38> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_39> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_40> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_41> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_42> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_43> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_44> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_45> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_46> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_47> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_48> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_49> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_50> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_51> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_0> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_1> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_2> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_3> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_4> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_5> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_6> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_7> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_8> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_9> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_10> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_11> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_12> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_13> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_14> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_15> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_16> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_17> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_18> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_19> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_20> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_21> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_22> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_23> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_24> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_26/temp_25> has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <XLXI_26/temp_57> in Unit <main_sch> is equivalent to the following FF/Latch, which will be removed : <XLXI_26/temp_59> 
+INFO:Xst:2261 - The FF/Latch <XLXI_26/temp_61> in Unit <main_sch> is equivalent to the following FF/Latch, which will be removed : <XLXI_26/temp_63> 
+INFO:Xst:2261 - The FF/Latch <XLXI_26/temp_60> in Unit <main_sch> is equivalent to the following FF/Latch, which will be removed : <XLXI_26/temp_62> 
+
+Optimizing unit <main_sch> ...
+
+Optimizing unit <main> ...
+
+Optimizing unit <generator> ...
+
+Optimizing unit <decider> ...
+WARNING:Xst:1710 - FF/Latch <XLXI_32/rand_4> (without init value) has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XLXI_32/take_rand_4> (without init value) has a constant value of 0 in block <main_sch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <XLXI_26/temp_52> is equivalent to a wire in block <main_sch>.
+WARNING:Xst:1294 - Latch <XLXI_26/temp_53> is equivalent to a wire in block <main_sch>.
+WARNING:Xst:1294 - Latch <XLXI_26/temp_54> is equivalent to a wire in block <main_sch>.
+WARNING:Xst:1294 - Latch <XLXI_26/temp_55> is equivalent to a wire in block <main_sch>.
+WARNING:Xst:1294 - Latch <XLXI_26/temp_56> is equivalent to a wire in block <main_sch>.
+WARNING:Xst:1294 - Latch <XLXI_26/temp_57> is equivalent to a wire in block <main_sch>.
+WARNING:Xst:1294 - Latch <XLXI_26/temp_58> is equivalent to a wire in block <main_sch>.
+WARNING:Xst:1294 - Latch <XLXI_26/temp_60> is equivalent to a wire in block <main_sch>.
+WARNING:Xst:1294 - Latch <XLXI_26/temp_61> is equivalent to a wire in block <main_sch>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main_sch, actual ratio is 6.
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_18> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_18> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_18> is equivalent to the following FF/Latch : <State_16_1> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_18> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_18> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_18> is equivalent to the following FF/Latch : <State_16_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 102
+ Flip-Flops                                            : 102
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main_sch.ngr
+Top Level Output File Name         : main_sch
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 22
+
+Cell Usage :
+# BELS                             : 817
+#      GND                         : 4
+#      INV                         : 16
+#      LUT1                        : 103
+#      LUT2                        : 65
+#      LUT2_D                      : 2
+#      LUT2_L                      : 9
+#      LUT3                        : 139
+#      LUT3_D                      : 2
+#      LUT3_L                      : 5
+#      LUT4                        : 135
+#      LUT4_D                      : 17
+#      LUT4_L                      : 18
+#      MUXCY                       : 129
+#      MUXF5                       : 41
+#      MUXF6                       : 10
+#      MUXF7                       : 5
+#      VCC                         : 4
+#      XORCY                       : 113
+# FlipFlops/Latches                : 285
+#      FD                          : 22
+#      FDC                         : 14
+#      FDCE                        : 5
+#      FDE                         : 81
+#      FDPE                        : 1
+#      FDR                         : 89
+#      FDRE                        : 45
+#      FDRS                        : 11
+#      FDRSE                       : 5
+#      FDS                         : 11
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 4
+#      IOBUF                       : 4
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      290  out of   4656     6%  
+ Number of Slice Flip Flops:            285  out of   9312     3%  
+ Number of 4 input LUTs:                511  out of   9312     5%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    232     9%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clock                              | BUFGP                  | 285   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+Reset                              | IBUF                   | 20    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 12.054ns (Maximum Frequency: 82.960MHz)
+   Minimum input arrival time before clock: 4.817ns
+   Maximum output required time after clock: 5.998ns
+   Maximum combinational path delay: 7.195ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock'
+  Clock period: 12.054ns (frequency: 82.960MHz)
+  Total number of paths / destination ports: 19612 / 536
+-------------------------------------------------------------------------
+Delay:               12.054ns (Levels of Logic = 12)
+  Source:            XLXI_32/take_rand_0 (FF)
+  Destination:       XLXI_18/regDI_0 (FF)
+  Source Clock:      Clock rising
+  Destination Clock: Clock rising
+
+  Data Path: XLXI_32/take_rand_0 to XLXI_18/regDI_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             14   0.591   1.079  XLXI_32/take_rand_0 (XLXI_32/take_rand_0)
+     LUT2:I1->O            1   0.704   0.000  XLXI_32/Msub_equals_lut<0> (XLXI_32/Msub_equals_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_32/Msub_equals_cy<0> (XLXI_32/Msub_equals_cy<0>)
+     XORCY:CI->O           8   0.804   0.836  XLXI_32/Msub_equals_xor<1> (XLXN_93<1>)
+     LUT2_D:I1->O          4   0.704   0.591  XLXI_26/Mrom_temp_mux00015511 (N11)
+     LUT4:I3->O            2   0.704   0.622  XLXI_26/Mrom_temp_mux0001601 (XLXI_26/Mrom_temp_mux000160)
+     begin scope: 'XLXI_18'
+     LUT3:I0->O            1   0.704   0.000  Mmux_Digit_52 (Mmux_Digit_52)
+     MUXF5:I1->O           1   0.321   0.000  Mmux_Digit_4_f5_1 (Mmux_Digit_4_f52)
+     MUXF6:I1->O           1   0.521   0.000  Mmux_Digit_3_f6_1 (Mmux_Digit_3_f62)
+     MUXF7:I1->O           6   0.521   0.748  Mmux_Digit_2_f7_1 (Digit<2>)
+     LUT3:I1->O            1   0.704   0.424  regDI_mux0001<5>112 (regDI_mux0001<5>112)
+     LUT4:I3->O            1   0.704   0.000  regDI_mux0001<5>1221 (regDI_mux0001<5>122)
+     FDS:D                     0.308          regDI_2
+    ----------------------------------------
+    Total                     12.054ns (7.754ns logic, 4.300ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
+  Total number of paths / destination ports: 50 / 50
+-------------------------------------------------------------------------
+Offset:              4.817ns (Levels of Logic = 3)
+  Source:            Reset (PAD)
+  Destination:       XLXI_33/Cnt_0 (FF)
+  Destination Clock: Clock rising
+
+  Data Path: Reset to XLXI_33/Cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            62   1.218   1.351  Reset_IBUF (Reset_IBUF)
+     begin scope: 'XLXI_33'
+     LUT2:I1->O            5   0.704   0.633  Cnt_or00001 (Cnt_or0000)
+     FDR:R                     0.911          Cnt_0
+    ----------------------------------------
+    Total                      4.817ns (2.833ns logic, 1.984ns route)
+                                       (58.8% logic, 41.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
+  Total number of paths / destination ports: 28 / 9
+-------------------------------------------------------------------------
+Offset:              5.998ns (Levels of Logic = 3)
+  Source:            XLXI_18/State_20 (FF)
+  Destination:       LCD_RW (PAD)
+  Source Clock:      Clock rising
+
+  Data Path: XLXI_18/State_20 to LCD_RW
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRSE:C->Q            4   0.591   0.762  State_20 (State<20>)
+     LUT2:I0->O            6   0.704   0.669  T_or00001 (LCD_RW)
+     end scope: 'XLXI_18'
+     OBUF:I->O                 3.272          LCD_RW_OBUF (LCD_RW)
+    ----------------------------------------
+    Total                      5.998ns (4.567ns logic, 1.431ns route)
+                                       (76.1% logic, 23.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               7.195ns (Levels of Logic = 4)
+  Source:            Clock (PAD)
+  Destination:       SPI_SCK (PAD)
+
+  Data Path: Clock to SPI_SCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O          286   1.457   1.342  Clock_BUFGP (Clock_BUFGP)
+     begin scope: 'XLXI_33'
+     INV:I->O              1   0.704   0.420  SPI_SCK1_INV_0 (SPI_SCK)
+     end scope: 'XLXI_33'
+     OBUF:I->O                 3.272          SPI_SCK_OBUF (SPI_SCK)
+    ----------------------------------------
+    Total                      7.195ns (5.433ns logic, 1.762ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.10 secs
+ 
+--> 
+
+Total memory usage is 224380 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  146 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

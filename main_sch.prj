@@ -1,0 +1,6 @@
+vhdl work "main.vhd"
+vhdl work "keyboard.vhd"
+vhdl work "generator.vhd"
+vhdl work "decider.vhd"
+vhdl work "calculate.vhd"
+vhdl work "main_sch.vhf"
